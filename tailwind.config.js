@@ -19,6 +19,13 @@ export default {
         "celestialBlue": "#3498DB",
         "indigoDye": "#00436F",
         "gray": "#808080",
+      },
+      width : {
+        327 : "20.4375rem",
+        350: "12.875rem",
+        1240 : "77.5rem",
+        436: "27.25rem",
+        837: "52.3125rem"
       }
     },
   },
