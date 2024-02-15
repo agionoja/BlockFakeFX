@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily : {
+        sans: ["Poppins", "sans-serif"]
+      },
       color: {
         "antiFlashWhite": "#EBEBEB",
         "whiteSmoke": "#F2F2F2",
