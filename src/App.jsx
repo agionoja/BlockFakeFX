@@ -3,7 +3,9 @@ import HowTO from "./Components/HowTO.jsx";
 function App() {
   return (
     <>
-      <HowTO></HowTO>
+      <div className={"mx-auto"}>
+        <HowTO></HowTO>
+      </div>
     </>
   );
 }
