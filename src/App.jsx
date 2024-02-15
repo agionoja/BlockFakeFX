@@ -1,5 +1,4 @@
 import HowTO from "./Components/HowTO.jsx";
-import React from "react";
 
 function App() {
   return (
