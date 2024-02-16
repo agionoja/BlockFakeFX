@@ -16,7 +16,7 @@ const Header = () => {
         <button onClick={toggleIsHidden} className={"z-50  md:hidden "}>
           <img className={" w-8"} src={isHidden ? hamburger : close} alt="" />
         </button>
-        <img src={logo} />
+        <img src={logo} alt="" />
       </div>
       <nav className={" justify-center md:flex md:w-436 "}>
         <ul
