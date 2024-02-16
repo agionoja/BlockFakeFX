@@ -5,11 +5,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <>
-      <div className={""}>
-        {/*<HowTO></HowTO>*/}
-        {/*<Header />*/}
-      </div>
-
       <BrowserRouter>
         <Routes>
           <Route path={"/"} element={<Header />}></Route>
