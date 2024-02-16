@@ -6,6 +6,10 @@ export default {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
       },
+
+      screens: {
+        mYMd: { max: "960px" },
+      },
       colors: {
         antiFlashWhite: "#EBEBEB",
         whiteSmoke: "#F2F2F2",
