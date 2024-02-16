@@ -4,14 +4,18 @@ import close from "../assets/icon-close.svg";
 
 const Header = () => {
   return (
-    <div className=" flex justify-between">
-      <div>
-        <img src={hamburger} alt="" />
+    <div className=" w-1240 mx-[100px] my-[48px] flex items-center justify-between">
+      <div className=" flex w-[106.81] justify-between">
+        <button>
+          <img src={hamburger} alt="" />
+        </button>
+
         <img src={logo} />
       </div>
-      <div className=" flex">
-        <nav className=" h-[64px] w-[436px]">
-          <ul className=" flex h-[64px] w-[436px]  bg-[D5D5D5]">
+      {/* section */}
+      <div className="  flex ">
+        <nav className=" h-[44px] w-[837px] ">
+          <ul className=" bg-whiteSmoke flex h-[64px] w-[436px] items-center justify-between rounded-[40px]">
             <li>
               <a href="">Home</a>
             </li>
@@ -23,7 +27,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <button className=" w-[177px] rounded-[32px] bg-[#00436F]">
+        <button className=" bg-indigo bg-indigoDye h-[46] w-[103] rounded-[32px] md:w-[177px] ">
           Report Drug
         </button>
       </div>

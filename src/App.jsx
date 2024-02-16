@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-function App() {
-  return <></>;
-=======
-import HowTO from "./Components/HowTO.jsx";
+import Header from "./Components/Header";
 import React from "react";
 
 function App() {
   return (
     <>
-      <HowTO></HowTO>
+      <Header />
     </>
   );
->>>>>>> b47807d3582cf302108e80145c850b9af5740681
 }
-
 export default App;
