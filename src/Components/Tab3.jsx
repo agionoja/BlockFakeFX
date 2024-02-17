@@ -2,9 +2,11 @@ function Tab3() {
   return (
     <div className={"flex w-full flex-col items-center"}>
       <div
-        className={" w-3/5 flex-col flex-wrap rounded-3xl bg-white px-10 py-2"}
+        className={
+          " hidden w-3/5 flex-col flex-wrap rounded-3xl bg-white px-10 py-4 md:flex"
+        }
       >
-        <div className={"tab-3-wrap"}>
+        <div className={"tab-3-wrap "}>
           <h2>Drug Name</h2> <p>CARMITRINE 500g</p>
         </div>
         <div className={"tab-3-wrap"}>
