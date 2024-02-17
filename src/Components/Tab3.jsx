@@ -21,7 +21,7 @@ function Tab3() {
         </div>
       </div>
 
-      <p className={"mt-2"}>
+      <p className={"mt-5"}>
         Instantly verify your product's authenticity and status for peace of
         mind
       </p>
