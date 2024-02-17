@@ -18,11 +18,11 @@ const Header = () => {
         </button>
         <img src={logo} alt="" />
       </div>
-      <nav className={" justify-center md:flex md:w-436 "}>
+      <nav className={" justify-center   md:flex md:w-436 "}>
         <ul
           className={
-            `${isHidden ? "-translate-y-56" : "-translate-y-0"}` +
-            " absolute -left-4 top-0 flex h-56 w-2/4 flex-col gap-5 rounded-none  bg-whiteSmoke pl-4 pt-16 text-lg text-gray transition duration-500 md:static md:h-12 md:w-full md:-translate-y-0 md:flex-row  md:items-center md:justify-between md:gap-0 md:rounded-3xl md:px-10 md:pt-0 md:text-sm "
+            `${isHidden ? "-translate-y-60" : "-translate-y-0"}` +
+            " absolute -left-4 top-0 z-20 flex h-56 w-2/4 flex-col gap-5 rounded-none  bg-whiteSmoke pl-4 pt-16 text-lg text-gray transition duration-500 md:static md:h-12 md:w-full md:-translate-y-0 md:flex-row  md:items-center md:justify-between md:gap-0 md:rounded-3xl md:px-10 md:pt-0 md:text-sm "
           }
         >
           <Link to={"/"}>Home</Link>

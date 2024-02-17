@@ -17,7 +17,7 @@ const Hero = () => {
         Verify Your Meds Instantly! Your Health, Our Priority
       </h1>
 
-      <h2 className={"text-lg leading-relaxed"}>
+      <h2 className={"text-lg leading-relaxed text-whiteSmokeDark"}>
         Empowering Nigerians with Instant Assurance: Scan, Verify, Thrive. Your
         Wellness, Our Commitment.
       </h2>
@@ -50,7 +50,7 @@ const Hero = () => {
 
       <div
         className={
-          "absolute bottom-14 left-0 right-0 flex animate-pulse justify-between"
+          "absolute bottom-14 left-0 right-0 hidden animate-pulse justify-between md:flex"
         }
       >
         <img
