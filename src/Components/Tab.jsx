@@ -1,13 +1,10 @@
-import { useContext, useState } from "react";
-import Tab1 from "./Tab1.jsx";
-import Tab2 from "./Tab2.jsx";
-import Tab3 from "./Tab3.jsx";
+import { useContext } from "react";
+
 import TabCarousal from "./TabCarousal.jsx";
 import PageContext from "../PageContext.jsx";
 
 function Tab() {
-  const [isActive, setIsActive] = useState(1);
-  const { tabIndex, setTabIndex } = useContext(PageContext);
+  const { tabIndex } = useContext(PageContext);
   const btnText = [
     "Dial the Code",
     "Enter the Medication Code",
@@ -35,7 +32,11 @@ function Tab() {
           </button>
         ))}
       </div>
-      <div className={" absolute right-0 h-300 md:w-[64%]"}>
+      <div
+        className={
+          " absolute right-0 h-300 rounded-3xl bg-whiteSmoke md:w-[64%]"
+        }
+      >
         <TabCarousal />
       </div>
     </section>

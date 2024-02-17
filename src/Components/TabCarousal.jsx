@@ -1,7 +1,4 @@
-import Tab1 from "./Tab1.jsx";
-import Tab2 from "./Tab2.jsx";
-import Tab3 from "./Tab3.jsx";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import PageContext from "../PageContext.jsx";
 
 function TabCarousal() {
@@ -16,8 +13,8 @@ function TabCarousal() {
           }}
           key={index}
           className={
-            "flex h-full w-full items-center justify-center bg-whiteSmoke  " +
-            "px-2 py-3.5 text-center text-textBlack transition duration-500 md:flex-col md:rounded-3xl"
+            "flex h-full w-full items-center justify-center  " +
+            "rounded-3xl px-2 py-3.5 text-center text-textBlack transition duration-500 md:flex-col"
           }
         >
           <Tab></Tab>
@@ -26,14 +23,14 @@ function TabCarousal() {
 
       <div
         className={
-          "absolute left-0 right-0 top-0 flex justify-center gap-6 pt-5 md:hidden"
+          "absolute left-0 right-0 top-0 flex items-center justify-center gap-6 pt-5 md:hidden"
         }
       >
         {tabData.map((_, index) => (
           <button
             className={
               "h-8 w-8 transform rounded-full bg-white transition duration-500 " +
-              `${tabIndex === index ? " !h-10 !w-10 !bg-celestialBlue text-white" : ""}`
+              `${tabIndex === index ? " !h-10 !w-10 !bg-celestialBlue text-white shadow-lg" : ""}`
             }
             // onClick={() => setTabIndex(index)}
             key={index}
