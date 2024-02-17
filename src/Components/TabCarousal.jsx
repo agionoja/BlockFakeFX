@@ -33,7 +33,7 @@ function TabCarousal() {
           <button
             className={
               "h-8 w-8 transform rounded-full bg-white transition duration-500 " +
-              `${tabIndex === index ? " h-12 w-12 !bg-celestialBlue text-white" : ""}`
+              `${tabIndex === index ? " !h-10 !w-10 !bg-celestialBlue text-white" : ""}`
             }
             // onClick={() => setTabIndex(index)}
             key={index}
