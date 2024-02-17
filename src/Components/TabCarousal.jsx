@@ -1,27 +1,18 @@
-import Tab1 from "./Tab1.jsx"
-import Tab2 from "./Tab2.jsx"
-import Tab3 from "./Tab3.jsx"
-import {
-  useContext,
-  useEffect,
-  useState
-} from "react"
-import PageContext from "../PageContext.jsx"
+import Tab1 from "./Tab1.jsx";
+import Tab2 from "./Tab2.jsx";
+import Tab3 from "./Tab3.jsx";
+import { useContext, useEffect, useState } from "react";
+import PageContext from "../PageContext.jsx";
 
 function TabCarousal() {
-  const { tabIndex, setTabIndex, tabData } =
-    useContext(PageContext)
+  const { tabIndex, setTabIndex, tabData } = useContext(PageContext);
 
   return (
-    <section
-      className={
-        "relative h-full w-full overflow-hidden"
-      }
-    >
+    <section className={"relative h-full w-full overflow-hidden"}>
       {tabData.map((Tab, index) => (
         <div
           style={{
-            transform: `translateY(${-100 * tabIndex}%)`
+            transform: `translateY(${-100 * tabIndex}%)`,
           }}
           key={index}
           className={
@@ -44,7 +35,7 @@ function TabCarousal() {
               "h-8 w-8 transform rounded-full bg-white transition duration-500 " +
               `${tabIndex === index ? " h-10 w-10 !bg-celestialBlue text-white" : ""}`
             }
-            onClick={() => setTabIndex(index)}
+            // onClick={() => setTabIndex(index)}
             key={index}
           >
             {index + 1}
@@ -52,7 +43,7 @@ function TabCarousal() {
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default TabCarousal
+export default TabCarousal;

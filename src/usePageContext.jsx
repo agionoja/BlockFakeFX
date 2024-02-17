@@ -19,7 +19,7 @@ function usePageContext() {
 
     setTimeout(() => {
       nextTab();
-    }, 3000);
+    }, 5000);
   }, [tabData.length, tabIndex]);
 
   return {

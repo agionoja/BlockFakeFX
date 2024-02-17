@@ -6,22 +6,22 @@ import Tab from "./Components/Tab.jsx";
 import TabCarousal from "./Components/TabCarousal.jsx";
 import PageContextProvider from "./PageContextProvider.jsx";
 import Hero from "./Components/Hero.jsx";
+import Webcam from "./Components/Webcam.jsx";
 
 function App() {
   return (
-    <div>
-      <PageContextProvider>
-        <div className={"px-4 md:px-0"}>
-          <HowTO />
-          {/*<Hero />*/}
-        </div>
-        {/*<BrowserRouter>*/}
-        {/*  <Routes>*/}
-        {/*    <Route path={"/"} element={<Header />}></Route>*/}
-        {/*  </Routes>*/}
-        {/*</BrowserRouter>*/}
-      </PageContextProvider>
-    </div>
+    <PageContextProvider>
+      <div className={"px-4 md:px-0"}>
+        <HowTO />
+        <Webcam />
+        {/*<Hero />*/}
+      </div>
+      {/*<BrowserRouter>*/}
+      {/*  <Routes>*/}
+      {/*    <Route path={"/"} element={<Header />}></Route>*/}
+      {/*  </Routes>*/}
+      {/*</BrowserRouter>*/}
+    </PageContextProvider>
   );
 }
 
