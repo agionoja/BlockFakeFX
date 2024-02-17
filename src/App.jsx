@@ -11,16 +11,21 @@ import Webcam from "./Components/Webcam.jsx";
 function App() {
   return (
     <PageContextProvider>
-      <div className={"px-4 md:px-0"}>
-        <HowTO />
-        <Webcam />
+      <div
+        className={
+          "md:max-w-1240 mx-auto min-w-300 justify-between px-2 md:px-0"
+        }
+      >
+        {/*<HowTO />*/}
+        {/*<Header />*/}
         {/*<Hero />*/}
+        {/*<BrowserRouter>*/}
+        {/*  <Routes>*/}
+        {/*    <Route path={"/"} element={<Header />}></Route>*/}
+        {/*  </Routes>*/}
+        {/*</BrowserRouter>*/}
+        <Hero />
       </div>
-      {/*<BrowserRouter>*/}
-      {/*  <Routes>*/}
-      {/*    <Route path={"/"} element={<Header />}></Route>*/}
-      {/*  </Routes>*/}
-      {/*</BrowserRouter>*/}
     </PageContextProvider>
   );
 }

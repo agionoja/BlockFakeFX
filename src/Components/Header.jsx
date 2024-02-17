@@ -1,35 +1,24 @@
-import logo from "/src/assets/logo.png"
-import hamburger from "/src/assets/hamburger.png"
-import close from "../assets/icon-close.svg"
-import { Link } from "react-router-dom"
-import { useState } from "react"
+import logo from "/src/assets/logo.png";
+import hamburger from "/src/assets/hamburger.png";
+import close from "../assets/icon-close.svg";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Header = () => {
-  const [isHidden, setIsHidden] = useState(true)
+  const [isHidden, setIsHidden] = useState(true);
   const toggleIsHidden = () => {
-    setIsHidden(!isHidden)
-  }
+    setIsHidden(!isHidden);
+  };
 
   return (
-    <div className="relative flex w-343 justify-between md:w-1240">
+    <div className="relative flex justify-between ">
       <div className={"flex gap-2"}>
-        <button
-          onClick={toggleIsHidden}
-          className={"z-50  md:hidden "}
-        >
-          <img
-            className={" w-8"}
-            src={isHidden ? hamburger : close}
-            alt=""
-          />
+        <button onClick={toggleIsHidden} className={"z-50  md:hidden "}>
+          <img className={" w-8"} src={isHidden ? hamburger : close} alt="" />
         </button>
         <img src={logo} alt="" />
       </div>
-      <nav
-        className={
-          " justify-center md:flex md:w-436 "
-        }
-      >
+      <nav className={" justify-center md:flex md:w-436 "}>
         <ul
           className={
             `${isHidden ? "-translate-y-56" : "-translate-y-0"}` +
@@ -49,7 +38,7 @@ const Header = () => {
         Report Drug
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

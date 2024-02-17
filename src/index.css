@@ -10,7 +10,7 @@
 
 @layer components {
   .how-to-btn {
-    @apply rounded-3xl bg-white px-10 py-4 text-left;
+    @apply rounded-3xl  bg-white px-10 py-4 text-left;
   }
 
   .tab-3-wrap {
