@@ -1,13 +1,18 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Tab1 from "./Components/Tab1.jsx";
-import Tab2 from "./Components/Tab2.jsx";
-import Tab3 from "./Components/Tab3.jsx";
+import Tab1 from "../Components/Tab1.jsx";
+import Tab2 from "../Components/Tab2.jsx";
+import Tab3 from "../Components/Tab3.jsx";
 
 function usePageContext() {
-  // const location = useLocation();
+  const location = useLocation();
   const [tabIndex, setTabIndex] = useState(0);
   const tabData = [Tab1, Tab2, Tab3];
+  // const routes = ["/", "/about-us", "/faq"];
+  const activeRoute = () => {
+    console.log(location.pathname);
+    return location.pathname;
+  };
 
   useEffect(() => {
     const nextTab = () => {
@@ -24,6 +29,7 @@ function usePageContext() {
 
   return {
     // location,
+    activeRoute,
     tabData,
     tabIndex,
     setTabIndex,

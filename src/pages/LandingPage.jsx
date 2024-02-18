@@ -1,6 +1,5 @@
 import Header from "../Components/Header.jsx";
 import Hero from "../Components/Hero.jsx";
-import Tab from "../Components/Tab.jsx";
 import HowTO from "../Components/HowTO.jsx";
 import Footer from "../Components/Footer.jsx";
 
