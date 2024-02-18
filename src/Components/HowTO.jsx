@@ -2,7 +2,7 @@ import Tab from "./Tab.jsx";
 
 function HowTO() {
   return (
-    <section className={"md: mx-auto  min-w-300 md:w-1240"}>
+    <section className={"  w-full"}>
       <div className={"mx-auto"}>
         <h2
           className={" mb-1  text-center font-bold text-textBlack md:text-lg"}

@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       className={
-        " relative  flex w-full flex-col items-center justify-center gap-5 rounded-3xl bg-celestialBlue py-8 text-center text-textBlack md:py-16"
+        " relative flex  w-full flex-col items-center justify-center gap-5 rounded-3xl bg-celestialBlue px-2 py-8 text-center text-white md:py-16"
       }
     >
       <h1
@@ -17,7 +17,7 @@ const Hero = () => {
         Verify Your Meds Instantly! Your Health, Our Priority
       </h1>
 
-      <h2 className={"text-lg leading-relaxed text-whiteSmokeDark"}>
+      <h2 className={"text-lg leading-relaxed"}>
         Empowering Nigerians with Instant Assurance: Scan, Verify, Thrive. Your
         Wellness, Our Commitment.
       </h2>
@@ -25,26 +25,28 @@ const Hero = () => {
       <fieldset className={"flex gap-2"}>
         <input
           className={
-            " w-64 rounded-3xl  px-5 py-4 text-[0.65rem] outline-none md:w-436 md:px-10 md:text-sm"
+            " gmd:max-w-[436px] max-w-64  rounded-3xl px-5 py-4 text-[0.65rem] outline-none md:px-10 md:text-sm"
           }
           type="text"
           placeholder={"Enter the secure digit on your drug pack"}
         />
 
         <button
-          className={
-            "z-50 rounded-3xl bg-indigoDye px-5  py-4  font-medium text-white md:px-10"
-          }
+          className={"z-50 rounded-3xl bg-indigoDye px-5 text-white md:px-10"}
         >
           Scan
         </button>
       </fieldset>
-      <div className={"relative my-4 flex items-center justify-center gap-4"}>
+      <div
+        className={"relative my-4 flex items-center justify-center gap-4 pb-4"}
+      >
         <div className={"h-0.5 w-32 bg-white md:w-52"}></div>
         <span>or</span>
         <div className={"h-0.5 w-32 bg-white md:w-52"}></div>
       </div>
-      <button className={"absolute bottom-10 left-0 right-0 mx-auto"}>
+      <button
+        className={"absolute bottom-5 left-0 right-0 mx-auto py-4 md:bottom-10"}
+      >
         <img src={qrImage} alt="" />
       </button>
 

@@ -1,22 +1,23 @@
 import Header from "../Components/Header.jsx";
 import Hero from "../Components/Hero.jsx";
 import Tab from "../Components/Tab.jsx";
+import HowTO from "../Components/HowTO.jsx";
 
 function LandingPage() {
   return (
     <div
       className={
-        "md:max-w-1240 mx-auto mt-4 min-w-300 justify-between px-2 md:px-0"
+        "md:max-w-1240 mx-auto mb-8 mt-4 flex min-w-300 flex-col justify-between gap-8 px-2 md:px-0"
       }
     >
-      <div className={"mb-8"}>
+      <div className={""}>
         <Header />
       </div>
       <div>
         <Hero />
       </div>
       <div>
-        <Tab />
+        <HowTO />
       </div>
     </div>
   );

@@ -34,7 +34,7 @@ function Tab() {
       </div>
       <div
         className={
-          " absolute right-0 h-300 rounded-3xl bg-whiteSmoke md:w-[64%]"
+          " absolute right-0 h-300  rounded-3xl bg-whiteSmoke md:w-[64%]"
         }
       >
         <TabCarousal />
