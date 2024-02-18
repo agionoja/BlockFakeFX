@@ -16,4 +16,8 @@
   .tab-3-wrap {
     @apply mb-2 flex justify-between  text-left text-textBlack last:mb-0;
   }
+
+  .active-route {
+    @apply rounded-3xl bg-indigoDye px-4 py-2 text-white;
+  }
 }

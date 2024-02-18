@@ -2,10 +2,12 @@ import logo from "/src/assets/logo.png";
 import hamburger from "/src/assets/hamburger.png";
 import close from "../assets/icon-close.svg";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import PageContext from "../context/PageContext.jsx";
 
 const Header = () => {
   const [isHidden, setIsHidden] = useState(true);
+  const { activeRoute } = useContext(PageContext);
   const toggleIsHidden = () => {
     setIsHidden(!isHidden);
   };
@@ -25,12 +27,29 @@ const Header = () => {
             " absolute -left-4 -top-4 z-20 flex h-56 w-3/4 flex-col gap-5 rounded-none  bg-whiteSmoke pl-4 pt-16 text-lg text-gray transition duration-500 md:static md:h-12 md:w-full md:-translate-y-0 md:flex-row  md:items-center md:justify-between md:gap-0 md:rounded-3xl md:px-10 md:pt-0 md:text-sm "
           }
         >
-          <Link to={"/"}>Home</Link>
           <li>
-            <Link to={"/"}>About Us</Link>
+            <Link
+              className={`${activeRoute() === "/" ? "active-route" : ""}`}
+              to={"/"}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link to={"/"}>FAQ</Link>
+            <Link
+              className={`${activeRoute() === "/about-us" ? "active-route" : ""}`}
+              to={"/"}
+            >
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={`${activeRoute() === "/faq" ? "active-route" : ""}`}
+              to={"/"}
+            >
+              FAQ
+            </Link>
           </li>
         </ul>
       </nav>
