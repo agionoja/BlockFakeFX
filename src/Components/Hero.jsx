@@ -25,7 +25,7 @@ const Hero = () => {
       <fieldset className={"flex gap-2"}>
         <input
           className={
-            " gmd:max-w-[436px] max-w-64  rounded-3xl px-5 py-4 text-[0.65rem] outline-none md:px-10 md:text-sm"
+            " rounded-3xl px-5  py-4 text-[0.65rem] text-textBlack outline-none md:w-436 md:max-w-[436px] md:px-10 md:text-sm"
           }
           type="text"
           placeholder={"Enter the secure digit on your drug pack"}
@@ -34,7 +34,7 @@ const Hero = () => {
         <button
           className={"z-50 rounded-3xl bg-indigoDye px-5 text-white md:px-10"}
         >
-          Scan
+          Check
         </button>
       </fieldset>
       <div
@@ -45,7 +45,9 @@ const Hero = () => {
         <div className={"h-0.5 w-32 bg-white md:w-52"}></div>
       </div>
       <button
-        className={"absolute bottom-5 left-0 right-0 mx-auto py-4 md:bottom-10"}
+        className={
+          "absolute bottom-5 left-0 right-0 z-50 mx-auto py-4 md:bottom-10"
+        }
       >
         <img src={qrImage} alt="" />
       </button>
