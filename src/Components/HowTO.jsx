@@ -1,4 +1,4 @@
-import Tab from "./Tab.jsx";
+import Tab from "./tab/Tab.jsx";
 
 function HowTO() {
   return (

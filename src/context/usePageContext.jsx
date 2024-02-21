@@ -1,8 +1,8 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Tab1 from "../Components/Tab1.jsx";
-import Tab2 from "../Components/Tab2.jsx";
-import Tab3 from "../Components/Tab3.jsx";
+import Tab1 from "../Components/tab/Tab1.jsx";
+import Tab2 from "../Components/tab/Tab2.jsx";
+import Tab3 from "../Components/tab/Tab3.jsx";
 
 function usePageContext() {
   const location = useLocation();

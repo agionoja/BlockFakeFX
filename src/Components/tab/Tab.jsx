@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import TabCarousal from "./TabCarousal.jsx";
-import PageContext from "../context/PageContext.jsx";
+import PageContext from "../../context/PageContext.jsx";
 
 function Tab() {
   const { tabIndex } = useContext(PageContext);
