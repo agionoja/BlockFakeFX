@@ -1,6 +1,7 @@
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
-
 import logo from "../assets/logo.png";
+import { FaX, FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -33,16 +34,16 @@ function Footer() {
         </div>
         {/* icons */}
         <div className=" mt-2 flex  gap-2  md:mt-0 lg:ml-24">
-          <div className=" h-8 w-8 cursor-pointer rounded-full bg-slate-50  p-2  text-[18px] text-[#00436F] md:h-10 md:w-10 md:text-2xl">
-            <FaTwitter />
-          </div>
+          <Link className="icon-style" to={"/"}>
+            <FaXTwitter />
+          </Link>
 
-          <div className=" h-8 w-8 cursor-pointer rounded-full bg-slate-50 p-2  text-[18px] text-[#00436F] md:h-10 md:w-10 md:text-2xl">
+          <Link to={"/"} className="icon-style">
             <FaFacebook />
-          </div>
-          <div className=" h-8 w-8 cursor-pointer rounded-full bg-slate-50 p-2  text-[18px] text-[#00436F] md:h-10 md:w-10 md:text-2xl">
+          </Link>
+          <Link to={"/"} className=" icon-style">
             <FaInstagram />
-          </div>
+          </Link>
         </div>
       </div>
     </footer>

@@ -29,7 +29,7 @@ const Header = () => {
         >
           <li>
             <Link
-              className={`${activeRoute() === "/" ? "active-route" : ""}`}
+              className={`${activeRoute() === "/" ? "md:active-route" : ""}`}
               to={"/"}
             >
               Home
@@ -37,7 +37,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              className={`${activeRoute() === "/about-us" ? "active-route" : ""}`}
+              className={`${activeRoute() === "/about-us" ? "md:active-route" : ""}`}
               to={"/"}
             >
               About Us
@@ -45,7 +45,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              className={`${activeRoute() === "/faq" ? "active-route" : ""}`}
+              className={`${activeRoute() === "/faq" ? "md:active-route" : ""}`}
               to={"/"}
             >
               FAQ

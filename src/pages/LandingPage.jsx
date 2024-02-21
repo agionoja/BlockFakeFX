@@ -2,13 +2,15 @@ import Header from "../Components/Header.jsx";
 import Hero from "../Components/Hero.jsx";
 import HowTO from "../Components/HowTO.jsx";
 import Footer from "../Components/Footer.jsx";
+import QrReader from "../Components/QrReader.jsx";
+import Webcam from "../Components/Webcam.jsx";
 
 function LandingPage() {
   return (
     <div>
       <div
         className={
-          "md:max-w-1240 mx-auto flex min-w-300 flex-col justify-between px-2 pt-4 md:px-0"
+          "mx-auto flex min-w-300 flex-col justify-between px-2 pt-4 md:max-w-1240 md:px-0"
         }
       >
         <div className={"mb-10"}>
@@ -23,6 +25,9 @@ function LandingPage() {
       </div>
       <div>
         <Footer />
+        <Webcam>
+          <QrReader />
+        </Webcam>
       </div>
     </div>
   );

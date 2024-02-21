@@ -1,4 +1,4 @@
-import barCode from "../assets/bar-code.png";
+import barCode from "../../assets/bar-code.png";
 
 function Tab2() {
   return (
