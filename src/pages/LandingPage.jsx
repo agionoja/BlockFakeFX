@@ -3,8 +3,7 @@ import Hero from "../Components/Hero.jsx";
 import HowTO from "../Components/HowTO.jsx";
 import Scanner from "../Components/Scanner.jsx"
 import Footer from "../Components/Footer.jsx";
-import QrReader from "../Components/QrReader.jsx";
-import Webcam from "../Components/Webcam.jsx";
+
 
 function LandingPage() {
   return (
@@ -27,9 +26,9 @@ function LandingPage() {
       <div>
         <Scanner/>
         <Footer />
-        <Webcam>
-          <QrReader />
-        </Webcam>
+        
+          
+        
       </div>
     </div>
   );

@@ -10,14 +10,7 @@ const Scanner = () => {
     
     <div className="flex items-center justify-center w-[80%] h-[20rem] bg-[#ffff] rounded-[20px]
     border-[0.2rem] border-black "> 
-
-     
-    
-    
     <div className=" flex justify-center items-center  bg-black h-[1px] w-[80%]">
-        
-       
-
         <div className="flex items-center justify-center">
     
     <div className="w-[25%] h-[20rem] bg-white relative left-[40%]" >
@@ -30,27 +23,17 @@ const Scanner = () => {
     </div>
 
     </div>
+    </div> 
     </div>
-
-    
-
-    
-    </div>
-  
-    
         <div className="top-[6rem] flex items-center py-3 ">
 <div className="bg-[#F7EFA3] flex gap-2 items-center p-1 rounded-lg">
     <img src="src/assets/Exclaim.png" alt="" />
     <h4 className="text-[12px]">Make sure to allow camera access</h4>
 </div>
 </div>
-
     <button className="text-[14px] font-semibold flex items-center justify-center gap-3 bg-[#A4CCE6] p-2 rounded-2xl w-[80%]"><img src="src/assets/Camera Icon.png" alt="" /> Open Camera</button>
 
-
     </div>
-    
-     
     )
     }
     export default Scanner
