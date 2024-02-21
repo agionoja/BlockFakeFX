@@ -1,6 +1,7 @@
 import Header from "../Components/Header.jsx";
 import Hero from "../Components/Hero.jsx";
 import HowTO from "../Components/HowTO.jsx";
+import Scanner from "../Components/Scanner.jsx"
 import Footer from "../Components/Footer.jsx";
 
 function LandingPage() {
@@ -22,6 +23,7 @@ function LandingPage() {
         </div>
       </div>
       <div>
+        <Scanner/>
         <Footer />
       </div>
     </div>

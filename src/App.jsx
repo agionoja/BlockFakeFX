@@ -6,8 +6,8 @@ import Tab from "./Components/Tab.jsx";
 import TabCarousal from "./Components/TabCarousal.jsx";
 import PageContextProvider from "./context/PageContextProvider.jsx";
 import Hero from "./Components/Hero.jsx";
-import Webcam from "./Components/Webcam.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
+import Scanner from "./Components/Scanner.jsx"
 
 function App() {
   return (
@@ -17,7 +17,12 @@ function App() {
           <Route path={"/"} element={<LandingPage />}></Route>
         </Routes>
       </PageContextProvider>
-    </BrowserRouter>
+      
+    </BrowserRouter> 
+     
+    
+    
+    
   );
 }
 
