@@ -3,8 +3,12 @@ import Hero from "../Components/Hero.jsx"
 import HowTO from "../Components/HowTO.jsx"
 import Footer from "../Components/Footer.jsx"
 import QrFrame from "../Components/qr-reader/QrFrame.jsx"
+import { useContext } from "react"
+import PageContext from "../context/PageContext.jsx"
+import Modal from "../Components/Modal.jsx"
 
 function PageTemplate({ children }) {
+  const { isQrHidden, setIsQrHidden } = useContext(PageContext)
   return (
     <div className={"relative"}>
       <div
@@ -23,7 +27,7 @@ function PageTemplate({ children }) {
         </div>
       </div>
       <Footer />
-      <QrFrame className={"absolute top-0 right-0 left-0 mx-auto mt-32 z-50"} />
+      {isQrHidden ? "" : <Modal><QrFrame /></Modal>}
     </div>
   )
 }

@@ -1,8 +1,11 @@
-import qrImage from "../assets/scan-qr-img.png";
-import animationLeft from "../assets/animation-left.png";
-import animationRight from "../assets/animation-right.png";
+import qrImage from "../assets/scan-qr-img.png"
+import animationLeft from "../assets/animation-left.png"
+import animationRight from "../assets/animation-right.png"
+import { useContext } from "react"
+import PageContext from "../context/PageContext.jsx"
 
 const Hero = () => {
+  const { setIsQrHidden } = useContext(PageContext)
   return (
     <section
       className={
@@ -48,6 +51,8 @@ const Hero = () => {
         className={
           "absolute bottom-5 left-0 right-0 z-50 mx-auto py-4 md:bottom-10"
         }
+
+        onClick={() => setIsQrHidden(false)}
       >
         <img src={qrImage} alt="" />
       </button>
@@ -69,7 +74,7 @@ const Hero = () => {
         />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
