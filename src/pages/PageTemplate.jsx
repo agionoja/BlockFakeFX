@@ -8,7 +8,6 @@ import PageContext from "../context/PageContext.jsx"
 import Modal from "../Components/Modal.jsx"
 
 function PageTemplate({ children }) {
-  const { isQrHidden, setIsQrHidden } = useContext(PageContext)
   return (
     <div className={"relative"}>
       <div
@@ -27,7 +26,7 @@ function PageTemplate({ children }) {
         </div>
       </div>
       <Footer />
-      {isQrHidden ? "" : <Modal><QrFrame /></Modal>}
+      {children}
     </div>
   )
 }

@@ -1,11 +1,9 @@
 import qrImage from "../assets/scan-qr-img.png"
 import animationLeft from "../assets/animation-left.png"
 import animationRight from "../assets/animation-right.png"
-import { useContext } from "react"
-import PageContext from "../context/PageContext.jsx"
+import { Link } from "react-router-dom"
 
 const Hero = () => {
-  const { setIsQrHidden } = useContext(PageContext)
   return (
     <section
       className={
@@ -47,15 +45,13 @@ const Hero = () => {
         <span>or</span>
         <div className={"h-0.5 w-32 bg-white md:w-52"}></div>
       </div>
-      <button
-        className={
-          "absolute bottom-5 left-0 right-0 z-50 mx-auto py-4 md:bottom-10"
-        }
-
-        onClick={() => setIsQrHidden(false)}
+      <Link to={"/qr-scanner"}
+            className={
+              "a bottom-5 left-0 right-0 z-50 mx-auto py-4 md:bottom-10"
+            }
       >
         <img src={qrImage} alt="" />
-      </button>
+      </Link>
 
       <div
         className={

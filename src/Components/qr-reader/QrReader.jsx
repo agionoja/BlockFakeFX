@@ -1,6 +1,7 @@
 import QrScanner from "qr-scanner"
 // import qrFrame from "../assets/qr-img.svg";
-import { useEffect, useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
+import PageContext from "../../context/PageContext.jsx"
 
 export default function QrReader() {
   const scanner = useRef(null)

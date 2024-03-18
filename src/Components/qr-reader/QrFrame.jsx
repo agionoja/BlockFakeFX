@@ -6,10 +6,10 @@ export default function QrFrame({ className }) {
       <div className={"relative  w-64 md:w-72 md:h-80 h-72"}>
         <div className={"flex w-full h-full border-2 border-black rounded-2xl overflow-hidde"}>
           <QrReader />
-          <div className={"w-20 h-0.5  absolute left-0 top-0 right-0 mx-auto   bg-white"}></div>
-          <div className={"w-20 h-0.5  absolute left-0 bottom-0 right-0 mx-auto   bg-white"}></div>
-          <div className={"w-0.5 h-20  absolute left-0 top-0 bottom-0 my-auto   bg-white"}></div>
-          <div className={"w-0.5 h-20  absolute right-0 top-0 bottom-0 my-auto   bg-white"}></div>
+          <div className={"w-20 h-0.5  absolute left-0 top-0 right-0 mx-auto   bg-whiteSmoke"}></div>
+          <div className={"w-20 h-0.5  absolute left-0 bottom-0 right-0 mx-auto   bg-whiteSmoke"}></div>
+          <div className={"w-0.5 h-20  absolute left-0 top-0 bottom-0 my-auto   bg-whiteSmoke"}></div>
+          <div className={"w-0.5 h-20  absolute right-0 top-0 bottom-0 my-auto   bg-whiteSmoke"}></div>
           <div className={"w-[90%] rounded-2xl animate-pulse h-[1px] absolute right-0 left-0 top-0 bottom-0 my-auto mx-auto  bg-gray-400"}></div>
         </div>
       </div>

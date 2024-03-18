@@ -7,7 +7,6 @@ import Tab3 from "../Components/tab/Tab3.jsx"
 function usePageContext() {
   const location = useLocation()
   const [tabIndex, setTabIndex] = useState(0)
-  const [isQrHidden, setIsQrHidden] = useState(true)
   const tabData = [Tab1, Tab2, Tab3]
   // const routes = ["/", "/about-us", "/faq"];
   const activeRoute = () => {
@@ -33,9 +32,7 @@ function usePageContext() {
     activeRoute,
     tabData,
     tabIndex,
-    setTabIndex,
-    isQrHidden,
-    setIsQrHidden
+    setTabIndex
   }
 }
 
