@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { useContext } from "react"
 import PageContext from "../context/PageContext.jsx"
 
-export default function Modal({ children, path }) {
+export default function Modal({ children, path = "/" }) {
   return (
     <div>
       <div className={"absolute  top-0 right-0 left-0 mx-auto mt-[8.5rem] md:mt-[9rem] z-[1000]"}>

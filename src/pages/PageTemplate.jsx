@@ -1,11 +1,7 @@
-import Header from "../Components/Header.jsx"
-import Hero from "../Components/Hero.jsx"
-import HowTO from "../Components/HowTO.jsx"
-import Footer from "../Components/Footer.jsx"
-import QrFrame from "../Components/qr-reader/QrFrame.jsx"
-import { useContext } from "react"
-import PageContext from "../context/PageContext.jsx"
-import Modal from "../Components/Modal.jsx"
+import Header from "../Components/Header.jsx";
+import Hero from "../Components/Hero.jsx";
+import HowTO from "../Components/HowTO.jsx";
+import Footer from "../Components/Footer.jsx";
 
 function PageTemplate({ children }) {
   return (
@@ -28,7 +24,7 @@ function PageTemplate({ children }) {
       <Footer />
       {children}
     </div>
-  )
+  );
 }
 
-export default PageTemplate
+export default PageTemplate;
