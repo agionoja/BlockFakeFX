@@ -2,7 +2,8 @@
 const Scanner = () => {
 
     return(
-    <div className="flex items-center flex-col justify-center mb-[4rem] pb-10 pt-10 rounded-[1rem] lg: w-[24rem] lg:mx-auto bg-[#f2f2f2]">
+    <div className="flex items-center flex-col justify-center mb-[4rem] pb-10 pt-10 rounded-[1rem] lg: w-[24rem]
+     lg:mx-auto bg-[#f2f2f2]">
     <div className="w-[80%] justify-start items-center pb-3  flex gap-2">
     <img src="src/assets/mi_webcam.png" alt="" />
     <h4>Webcam</h4>
@@ -13,8 +14,8 @@ const Scanner = () => {
     <div className=" flex justify-center items-center  bg-black h-[1px] w-[80%]">
         <div className="flex items-center justify-center">
     
-    <div className="w-[25%] h-[20rem] bg-white relative left-[40%]" >
-    </div>
+    <div className="w-[25%] h-[20rem] bg-white relative left-[40%]" > 
+    </div> {/** vertical cutting */}
 
     <div className="bg-white h-12 w-[24rem] relative left-[-2.4rem]">
         <div className="bg-white">
