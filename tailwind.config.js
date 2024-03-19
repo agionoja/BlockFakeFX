@@ -4,11 +4,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Poppins", "sans-serif"]
+        sans: ["Poppins", "sans-serif"],
       },
 
       screens: {
-        mYMd: { max: "960px" }
+        mYMd: { max: "960px" },
       },
       colors: {
         antiFlashWhite: "#EBEBEB",
@@ -20,7 +20,7 @@ export default {
         celestialBlue: "#3498DB",
         indigoDye: "#00436F",
         gray: "#808080",
-        overlay: "rgba(0, 0, 0, 0.6)"
+        overlay: "rgba(66,63,63,0.6)",
       },
       //
       // padding: {
@@ -41,29 +41,29 @@ export default {
         200: "12.5rem",
         // 1440: "90rem",
         430: "26.875rem",
-        800: "60rem"
+        800: "60rem",
       },
 
       height: {
         330: "20.625rem",
-        300: "18.75rem"
+        300: "18.75rem",
       },
 
       minWidth: {
         300: "18.75rem",
-        1240: "1240px"
+        1240: "1240px",
       },
 
       maxWidth: {
-        1240: "1200px"
+        1240: "1200px",
       },
 
       maxHeight: {
         330: "20.625rem",
         1240: "1240px",
-        300: "18.75"
-      }
-    }
+        300: "18.75",
+      },
+    },
   },
-  plugins: []
-}
+  plugins: [],
+};
