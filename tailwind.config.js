@@ -20,6 +20,7 @@ export default {
         celestialBlue: "#3498DB",
         indigoDye: "#00436F",
         gray: "#808080",
+        overlay: "rgba(66,63,63,0.6)",
       },
       //
       // padding: {
