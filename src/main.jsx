@@ -6,6 +6,6 @@ import ApICons from "./ApICons.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ApICons />
+    <App />
   </React.StrictMode>,
 );

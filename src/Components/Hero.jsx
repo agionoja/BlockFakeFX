@@ -1,9 +1,12 @@
-import qrImage from "../assets/scan-qr-img.png"
-import animationLeft from "../assets/animation-left.png"
-import animationRight from "../assets/animation-right.png"
-import { Link } from "react-router-dom"
+import qrImage from "../assets/scan-qr-img.png";
+import animationLeft from "../assets/animation-left.png";
+import animationRight from "../assets/animation-right.png";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import PageContext from "../context/PageContext.jsx";
 
 const Hero = () => {
+  const { setScannerOn } = useContext(PageContext);
   return (
     <section
       className={
@@ -45,13 +48,13 @@ const Hero = () => {
         <span>or</span>
         <div className={"h-0.5 w-32 bg-white md:w-52"}></div>
       </div>
-      <Link to={"/qr-scanner"}
-            className={
-              "a bottom-5 left-0 right-0 z-50 mx-auto py-4 md:bottom-10"
-            }
+      <button
+        onClick={() => setScannerOn(true)}
+        // to={"/qr-scanner"}
+        className={"bottom-5 left-0 right-0 z-50 mx-auto py-4 md:bottom-10"}
       >
         <img src={qrImage} alt="" />
-      </Link>
+      </button>
 
       <div
         className={
@@ -70,7 +73,7 @@ const Hero = () => {
         />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

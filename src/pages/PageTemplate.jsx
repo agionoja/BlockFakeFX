@@ -2,8 +2,14 @@ import Header from "../Components/Header.jsx";
 import Hero from "../Components/Hero.jsx";
 import HowTO from "../Components/HowTO.jsx";
 import Footer from "../Components/Footer.jsx";
+import Modal from "../Components/Modal.jsx";
+import QrFrame from "../Components/qr-reader/QrFrame.jsx";
+import { useContext } from "react";
+import PageContext from "../context/PageContext.jsx";
+import ScannedResult from "./ScannedResult.jsx";
 
 function PageTemplate({ children }) {
+  const { scannerOn } = useContext(PageContext);
   return (
     <div className={"relative"}>
       <div
@@ -22,7 +28,13 @@ function PageTemplate({ children }) {
         </div>
       </div>
       <Footer />
-      {children}
+      {scannerOn && (
+        <Modal>
+          <QrFrame />
+        </Modal>
+      )}
+
+      <ScannedResult />
     </div>
   );
 }

@@ -1,22 +1,73 @@
-import QrReader from "./QrReader.jsx"
+import QrReader from "./QrReader.jsx";
+import { AiOutlineClose } from "react-icons/ai";
+import { useContext } from "react";
+import PageContext from "../../context/PageContext.jsx";
 
 export default function QrFrame({ className }) {
+  const { setScannerOn } = useContext(PageContext);
+
   return (
-    <div className={"p-8 w-80 md:w-96 mx-auto bg-whiteSmoke flex flex-col justify-center items-center rounded-2xl " + className}>
-      <div className={"relative  w-64 md:w-72 md:h-80 h-72"}>
-        <div className={"flex w-full h-full border-2 border-black rounded-2xl overflow-hidde"}>
+    <div
+      className={
+        "mx-auto flex w-80 flex-col items-center justify-center rounded-2xl bg-whiteSmoke p-8 md:w-96 " +
+        className
+      }
+    >
+      <div className={"relative  h-72 w-64 md:h-80 md:w-72"}>
+        <div
+          className={
+            "overflow-hidde flex h-full w-full rounded-2xl border-2 border-black"
+          }
+        >
           <QrReader />
-          <div className={"w-20 h-0.5  absolute left-0 top-0 right-0 mx-auto   bg-whiteSmoke"}></div>
-          <div className={"w-20 h-0.5  absolute left-0 bottom-0 right-0 mx-auto   bg-whiteSmoke"}></div>
-          <div className={"w-0.5 h-20  absolute left-0 top-0 bottom-0 my-auto   bg-whiteSmoke"}></div>
-          <div className={"w-0.5 h-20  absolute right-0 top-0 bottom-0 my-auto   bg-whiteSmoke"}></div>
-          <div className={"w-[90%] rounded-2xl animate-pulse h-[1px] absolute right-0 left-0 top-0 bottom-0 my-auto mx-auto  bg-gray-400"}></div>
+          <div
+            className={
+              "absolute left-0  right-0 top-0 mx-auto h-0.5 w-20   bg-whiteSmoke"
+            }
+          ></div>
+          <div
+            className={
+              "absolute bottom-0  left-0 right-0 mx-auto h-0.5 w-20   bg-whiteSmoke"
+            }
+          ></div>
+          <div
+            className={
+              "absolute bottom-0  left-0 top-0 my-auto h-20 w-0.5   bg-whiteSmoke"
+            }
+          ></div>
+          <div
+            className={
+              "absolute bottom-0  right-0 top-0 my-auto h-20 w-0.5   bg-whiteSmoke"
+            }
+          ></div>
+          <div
+            className={
+              "bg-gray-400 absolute bottom-0 left-0 right-0 top-0 mx-auto my-auto h-[1px] w-[90%] animate-pulse  rounded-2xl"
+            }
+          ></div>
         </div>
       </div>
-      <div className={"text-xs flex flex-row-reverse items-center mt-4 bg-vanilla py-1 px-2 gap-1 rounded-2xl "}>
+      <div
+        className={
+          "mt-4 flex flex-row-reverse items-center gap-1 rounded-2xl bg-vanilla px-2 py-1 text-xs "
+        }
+      >
         <p>Make sure you allow camera access</p>
-        <span className={"rounded-full h-4 w-4 border-[1px] font-bold border-black  flex justify-center items-center"}>!</span>
+        <span
+          className={
+            "flex h-4 w-4 items-center justify-center rounded-full  border-[1px] border-black font-bold"
+          }
+        >
+          !
+        </span>
       </div>
+
+      <AiOutlineClose
+        onClick={() => setScannerOn(false)}
+        className={
+          "absolute left-0 right-0 top-20 z-[1000] mx-auto cursor-pointer "
+        }
+      />
     </div>
-  )
+  );
 }
