@@ -1,15 +1,11 @@
-import Modal from "./Modal";
+import Modal from "./Modal.jsx";
+
 import { ClipLoader } from "react-spinners";
 
-const Spinner = () => {
+export default function Spinner() {
   return (
     <Modal>
-      <ClipLoader
-        className={"fixed left-0 right-0 top-44 mx-auto"}
-        color="#36d7b7"
-      />
+      <ClipLoader />
     </Modal>
   );
-};
-
-export default Spinner;
+}
