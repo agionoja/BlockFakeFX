@@ -19,8 +19,8 @@ export default function Result() {
       <section
         // style={{ backgroundImage: `url(${expiredImg})` }}
         className={
-          `${isInDataBase ? "h-[450px] " : "h-[400px] "}` +
-          " relative mx-auto  flex w-[330px] flex-col items-center  rounded-lg bg-whiteSmoke px-10 py-8"
+          `${isInDataBase ? "h-[450px] " : "h-[440px] "}` +
+          " mx-auto  flex w-[344px] flex-col items-center  rounded-lg bg-whiteSmoke px-20 py-16 mt-[0.5rem] md:w-[390px] md:mt-0 md:rounded-[1.5rem]"
         }
       >
         {/*<div className={"absolute top-6 text-center "}>*/}
@@ -30,7 +30,7 @@ export default function Result() {
         {/*  <h3>Please call +2349009090900</h3>*/}
         {/*</div>*/}
         {isInDataBase && (
-          <div className="flex w-full flex-col gap-2 rounded-lg bg-white p-4 text-gray">
+          <div className=" flex w-[285px]  flex-col gap-2 rounded-lg bg-white   px-[2rem] text-gray md:w-[20rem] md:py-[1rem]">
             <h2 className={"mb-2 font-bold text-black"}>Drugs Details</h2>
             <div className="flex justify-between">
               <p>Drug Name</p>
