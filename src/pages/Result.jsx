@@ -4,11 +4,12 @@ import expiredImg from "../assets/expired.png";
 import notFoundImg from "../assets/not-found.jpg";
 import approved from "../assets/approved.png";
 import certifiedImg from "../assets/certified.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import PageContext from "../context/PageContext.jsx";
 
-export default function ScannedResult() {
-  const [isInDataBase, setIsInDataBase] = useState(true);
+export default function Result() {
+  const { isInDataBase, setIsInDataBase } = useContext(PageContext);
   const calcImg = () => {
     return approved;
   };

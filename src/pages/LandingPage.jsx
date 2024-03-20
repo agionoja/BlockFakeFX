@@ -6,10 +6,11 @@ import Modal from "../Components/Modal.jsx";
 import QrFrame from "../Components/qr-reader/QrFrame.jsx";
 import { useContext } from "react";
 import PageContext from "../context/PageContext.jsx";
-import ScannedResult from "./ScannedResult.jsx";
+import Result from "./Result.jsx";
+import Spinner from "../Components/Spinner.jsx";
 
-function PageTemplate({ children }) {
-  const { scannerOn } = useContext(PageContext);
+function LandingPage({ children }) {
+  const { scannerOn, scannedResult } = useContext(PageContext);
   return (
     <div className={"relative"}>
       <div
@@ -27,16 +28,16 @@ function PageTemplate({ children }) {
           <HowTO />
         </div>
       </div>
-      <Footer />
-      {scannerOn && (
+      {scannerOn && !scannedResult && (
         <Modal>
           <QrFrame />
         </Modal>
       )}
 
-      <ScannedResult />
+      {scannedResult && <Result />}
+      <Footer />
     </div>
   );
 }
 
-export default PageTemplate;
+export default LandingPage;

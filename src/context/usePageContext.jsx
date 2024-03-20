@@ -8,13 +8,15 @@ function usePageContext() {
   const location = useLocation();
   const [tabIndex, setTabIndex] = useState(0);
   const [scannerOn, setScannerOn] = useState(false);
+  const [scannedResult, setScannedResult] = useState("");
+  const [isInDataBase, setIsInDataBase] = useState(true);
+
   const tabData = [Tab1, Tab2, Tab3];
   // const routes = ["/", "/about-us", "/faq"];
   const activeRoute = () => {
     console.log(location.pathname);
     return location.pathname;
   };
-
   useEffect(() => {
     const nextTab = () => {
       setTabIndex(() => {
@@ -36,6 +38,10 @@ function usePageContext() {
     setTabIndex,
     scannerOn,
     setScannerOn,
+    scannedResult,
+    setScannedResult,
+    isInDataBase,
+    setIsInDataBase,
   };
 }
 

@@ -2,13 +2,15 @@ import QrScanner from "qr-scanner";
 // import qrFrame from "../assets/qr-img.svg";
 import { useContext, useEffect, useRef, useState } from "react";
 import PageContext from "../../context/PageContext.jsx";
+import Result from "../../pages/Result.jsx";
+import findDrug from "../../helpers/findDrug.js";
 
 export default function QrReader() {
   const scanner = useRef(null);
   const videoEl = useRef(null);
   const qrBoxEl = useRef(null);
   const [qrOn, setQrOn] = useState(false);
-  const [scannedResult, setScannedResult] = useState({});
+  const { setScannedResult, setIsInDataBase } = useContext(PageContext);
 
   useEffect(() => {
     if (videoEl.current && !scanner.current) {
@@ -46,7 +48,7 @@ export default function QrReader() {
         scanner.current.stop();
       }
     };
-  }, []);
+  }, [setScannedResult]);
 
   // useEffect(() => {
   //   if (!qrOn)
