@@ -11,6 +11,6 @@ export default async function fetchDrug(data) {
     );
     return response.data; // Return the data from the response
   } catch (err) {
-    throw new err(); // Throw the error to be caught by the caller
+    throw err; // Throw the error to be caught by the caller
   }
 }

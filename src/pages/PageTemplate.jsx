@@ -10,7 +10,7 @@ import Result from "./Result.jsx";
 import Spinner from "../Components/Spinner.jsx";
 
 function LandingPage({ children }) {
-  const { scannerOn, scannedResult, fetchedResult } = useContext(PageContext);
+  const { scannerOn, scannedResult, searchDrug } = useContext(PageContext);
   return (
     <div className={"relative"}>
       <div
@@ -37,6 +37,7 @@ function LandingPage({ children }) {
       {/*{scannedResult && <Result />}*/}
 
       {scannedResult && <Spinner />}
+      {searchDrug && <Spinner />}
       <Footer />
     </div>
   );

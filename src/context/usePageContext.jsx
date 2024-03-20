@@ -11,6 +11,7 @@ function usePageContext() {
   const [scannerOn, setScannerOn] = useState(false);
   const [scannedResult, setScannedResult] = useState("");
   const [fetchedResult, setFetchedResult] = useState("");
+  const [searchDrug, setSearchDrug] = useState("");
 
   const tabData = [Tab1, Tab2, Tab3];
   // const routes = ["/", "/about-us", "/faq"];
@@ -42,8 +43,16 @@ function usePageContext() {
           console.log(response);
         })
         .catch((error) => console.log(error));
+    } else if (searchDrug) {
+      fetchDrug(searchDrug)
+        .then((response) => {
+          setFetchedResult(response);
+          setSearchDrug("");
+          console.log(response);
+        })
+        .catch((error) => console.log(error));
     }
-  }, [scannedResult]);
+  }, [scannedResult, searchDrug]);
 
   return {
     // location,
@@ -56,6 +65,8 @@ function usePageContext() {
     scannedResult,
     setScannedResult,
     fetchedResult,
+    searchDrug,
+    setSearchDrug,
   };
 }
 
