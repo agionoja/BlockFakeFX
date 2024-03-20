@@ -8,8 +8,8 @@ export default function QrReader() {
   const videoEl = useRef(null);
   const qrBoxEl = useRef(null);
   const [qrOn, setQrOn] = useState(false);
-  const [scannedResult, setScannedResult] = useState({});
 
+  const { setScannedResult } = useContext(PageContext);
   useEffect(() => {
     if (videoEl.current && !scanner.current) {
       scanner.current = new QrScanner(
@@ -46,7 +46,7 @@ export default function QrReader() {
         scanner.current.stop();
       }
     };
-  }, []);
+  }, [setScannedResult]);
 
   // useEffect(() => {
   //   if (!qrOn)
