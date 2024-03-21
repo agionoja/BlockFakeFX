@@ -4,13 +4,14 @@ import HowTO from "../Components/HowTO.jsx";
 import Footer from "../Components/Footer.jsx";
 import Modal from "../Components/Modal.jsx";
 import QrFrame from "../Components/qr-reader/QrFrame.jsx";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import PageContext from "../context/PageContext.jsx";
 import Result from "./Result.jsx";
 import Spinner from "../Components/Spinner.jsx";
 
 function LandingPage({ children }) {
-  const { scannerOn, scannedResult, searchDrug } = useContext(PageContext);
+  const { scannerOn, scannedResult, searchDrug, closeResult, setCloseResult } =
+    useContext(PageContext);
   return (
     <div className={"relative"}>
       <div
@@ -34,7 +35,8 @@ function LandingPage({ children }) {
         </Modal>
       )}
 
-      {/*{scannedResult && <Result />}*/}
+      {/*scannedResult || searchDrug &&*/}
+      {!closeResult && <Result />}
 
       {scannedResult && <Spinner />}
       {searchDrug && <Spinner />}

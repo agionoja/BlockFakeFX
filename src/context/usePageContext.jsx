@@ -12,6 +12,7 @@ function usePageContext() {
   const [scannedResult, setScannedResult] = useState("");
   const [fetchedResult, setFetchedResult] = useState("");
   const [searchDrug, setSearchDrug] = useState("");
+  const [closeResult, setCloseResult] = useState(true);
 
   const tabData = [Tab1, Tab2, Tab3];
   // const routes = ["/", "/about-us", "/faq"];
@@ -40,6 +41,7 @@ function usePageContext() {
           setFetchedResult(response);
           setScannedResult("");
           setScannerOn(false);
+          setCloseResult(false);
           console.log(response);
         })
         .catch((error) => console.log(error));
@@ -48,7 +50,9 @@ function usePageContext() {
         .then((response) => {
           setFetchedResult(response);
           setSearchDrug("");
+          setCloseResult(false);
           console.log(response);
+          console.log("search drug triggered");
         })
         .catch((error) => console.log(error));
     }
@@ -67,6 +71,8 @@ function usePageContext() {
     fetchedResult,
     searchDrug,
     setSearchDrug,
+    closeResult,
+    setCloseResult,
   };
 }
 
