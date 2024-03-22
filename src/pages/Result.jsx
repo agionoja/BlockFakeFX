@@ -29,7 +29,7 @@ export default function Result() {
     return new Date(expiryDAte).getTime() < new Date().getTime();
   };
   const calcImg = () => {
-    return !fetchedResult ? notFoundImg : isExpired() ? expiredImg : approved;
+    return fetchedResult ? notFoundImg : isExpired() ? expiredImg : approved;
   };
 
   return (
@@ -38,10 +38,10 @@ export default function Result() {
         // style={{ backgroundImage: `url(${expiredImg})` }}
         className={
           `${!fetchedResult ? "h-[450px] " : "h-[400px] "}` +
-          " relative mx-auto  flex w-[330px] flex-col items-center  rounded-lg bg-whiteSmoke px-10 py-8"
+          " relative mx-auto  flex w-[345px] flex-col items-center  rounded-lg bg-whiteSmoke px-10 py-8 md:h-[30rem] md:w-[420px]"
         }
       >
-        {!fetchedResult && (
+        {fetchedResult && (
           <div className={"absolute top-6 text-center "}>
             <h2 className={" mb-2 text-xl font-bold"}>
               This Drug isn’t known to BlockFakeRx
@@ -50,8 +50,8 @@ export default function Result() {
           </div>
         )}
 
-        {fetchedResult && (
-          <div className="flex w-full flex-col gap-2 rounded-lg bg-white p-4 text-gray">
+        {!fetchedResult && (
+          <div className="mt-4 flex w-[19rem] flex-col  gap-2  rounded-lg bg-white  p-6 text-gray md:h-[21rem] md:w-[23rem]">
             <h2 className={"mb-2 font-bold text-black"}>Drugs Details</h2>
             <div className="flex justify-between">
               <p>Drug Name</p>
@@ -88,7 +88,7 @@ export default function Result() {
           </div>
         )}
         <img
-          className={"absolute mx-auto my-auto object-contain opacity-20"}
+          className={"absolute mx-auto my-12 object-contain opacity-30"}
           alt={""}
           src={calcImg()}
         />
