@@ -1,17 +1,17 @@
-import Header from "../Components/Header.jsx";
-import Hero from "../Components/Hero.jsx";
-import HowTO from "../Components/HowTO.jsx";
-import Footer from "../Components/Footer.jsx";
-import Modal from "../Components/Modal.jsx";
-import QrFrame from "../Components/qr-reader/QrFrame.jsx";
-import { useContext, useState } from "react";
-import PageContext from "../context/PageContext.jsx";
-import Result from "./Result.jsx";
-import Spinner from "../Components/Spinner.jsx";
+import Header from "../Components/Header.jsx"
+import Hero from "../Components/hero/Hero.jsx"
+import HowTO from "../Components/HowTO.jsx"
+import Footer from "../Components/Footer.jsx"
+import Modal from "../Components/Modal.jsx"
+import QrFrame from "../Components/qr-reader/QrFrame.jsx"
+import { useContext } from "react"
+import PageContext from "../context/PageContext.jsx"
+import Result from "./Result.jsx"
+import Spinner from "../Components/Spinner.jsx"
 
 function LandingPage({ children }) {
   const { scannerOn, scannedResult, searchDrug, closeResult, setCloseResult } =
-    useContext(PageContext);
+    useContext(PageContext)
   return (
     <div className={"relative"}>
       <div
@@ -42,7 +42,7 @@ function LandingPage({ children }) {
       {searchDrug && <Spinner />}
       <Footer />
     </div>
-  );
+  )
 }
 
-export default LandingPage;
+export default LandingPage
