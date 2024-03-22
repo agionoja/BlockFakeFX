@@ -21,5 +21,5 @@ export default function Modal({ children, className }) {
         }
       ></div>
     </div>
-  );
+  )
 }
