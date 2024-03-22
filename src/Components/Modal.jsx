@@ -2,14 +2,14 @@ export default function Modal({ children, className }) {
   return (
     <div
       className={
-        "z-[100000] my-auto flex h-screen w-full justify-center" +
+        " my-auto flex  w-full justify-center" +
         " " +
         className
       }
     >
       <div
         className={
-          "absolute left-0 right-0 top-0 z-[1000]  mx-auto mt-[8.5rem] md:mt-[9rem]"
+          "z-[100000] absolute left-0 right-0 top-0  mx-auto mt-[8.5rem] md:mt-[9rem]"
         }
       >
         {children}
@@ -21,5 +21,5 @@ export default function Modal({ children, className }) {
         }
       ></div>
     </div>
-  );
+  )
 }
