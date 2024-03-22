@@ -2,6 +2,7 @@ import qrImage from "../../assets/scan-qr-img.png"
 import { useState } from "react"
 import QrFrame from "../qr-reader/QrFrame.jsx"
 import Modal from "../Modal.jsx"
+import { Fa0 } from "react-icons/fa6"
 
 export default function ScanDrug() {
   const [qrOpen, setQrOpen] = useState(false)
@@ -18,7 +19,7 @@ export default function ScanDrug() {
         <img src={qrImage} alt="" />
       </button>
 
-      {qrOpen && <Modal className={<QrFrame />} />}
+      {qrOpen && <Modal><QrFrame /></Modal>}
     </>
 
   )
