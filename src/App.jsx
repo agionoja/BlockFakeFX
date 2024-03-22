@@ -1,8 +1,7 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import PageContextProvider from "./context/PageContextProvider.jsx";
-import PageTemplate from "./pages/PageTemplate.jsx";
-import QrPage from "./pages/QrPage.jsx";
-import Result from "./pages/Result.jsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import PageContextProvider from "./context/PageContextProvider.jsx"
+import PageTemplate from "./pages/PageTemplate.jsx"
+import Result from "./pages/Result.jsx"
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
         </Routes>
       </PageContextProvider>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

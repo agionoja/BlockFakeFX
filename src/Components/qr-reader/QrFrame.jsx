@@ -4,9 +4,11 @@ import { useContext } from "react"
 import PageContext from "../../context/PageContext.jsx"
 
 export default function QrFrame({ className, isHidden, onClick }) {
+  const { setFetchedResult, scannedResult, setScannedResult } = useContext(PageContext)
+
   return (
     <>
-      {!isHidden && <div
+      {isHidden && <div
         className={
           "mx-auto flex w-80 flex-col items-center justify-center rounded-2xl bg-whiteSmoke p-8 md:w-96 " +
           className
@@ -61,11 +63,12 @@ export default function QrFrame({ className, isHidden, onClick }) {
         </span>
         </div>
 
-        <AiOutlineClose
-          onClick={onClick}
-          className={
-            "absolute left-0 right-0 top-20 z-[1000] mx-auto cursor-pointer "
-          }
+        <AiOutlineClose size={44}
+                        color={"gold"}
+                        onClick={onClick}
+                        className={
+                          "absolute left-0 right-0 top-20 z-[1000] mx-auto cursor-pointer "
+                        }
         />
       </div>}
     </>
