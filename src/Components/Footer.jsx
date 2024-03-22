@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className=" relative  flex h-full w-full items-center justify-between gap-2 rounded-tl-3xl  rounded-tr-3xl bg-celestialBlue  bg-opacity-[0.6]  py-8 text-whiteSmoke  md:justify-around md:bg-opacity-[1] md:p-6">
+    <footer className=" relative  flex h-full w-full items-center justify-between gap-2 rounded-tl-3xl  rounded-tr-3xl bg-celestialBlue  py-8 text-whiteSmoke  md:justify-around md:bg-opacity-[1] md:p-6">
       <div className=" mx-4 md:mb-8 lg:mr-24">
         <img src={logo} />
       </div>

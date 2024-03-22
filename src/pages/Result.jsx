@@ -1,11 +1,8 @@
 import Modal from "../Components/Modal.jsx";
-import authenticImg from "../assets/authentic.png";
 import expiredImg from "../assets/expired.png";
 import notFoundImg from "../assets/not-found.jpg";
 import approved from "../assets/approved.png";
-import certifiedImg from "../assets/certified.png";
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
 import PageContext from "../context/PageContext.jsx";
 
 export default function Result() {

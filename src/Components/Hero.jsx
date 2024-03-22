@@ -1,21 +1,14 @@
-import qrImage from "../assets/scan-qr-img.png";
-import animationLeft from "../assets/animation-left.png";
-import animationRight from "../assets/animation-right.png";
-import { Link } from "react-router-dom";
-import { useContext, useRef } from "react";
-import PageContext from "../context/PageContext.jsx";
+import qrImage from "../assets/scan-qr-img.png"
+import animationLeft from "../assets/animation-left.png"
+import animationRight from "../assets/animation-right.png"
+import { Link } from "react-router-dom"
+import { useContext, useRef } from "react"
+import PageContext from "../context/PageContext.jsx"
 
 const Hero = () => {
-  const { setScannerOn, setSearchDrug } = useContext(PageContext);
+  const { setScannerOn } = useContext(PageContext)
 
-  const searchDrugRef = useRef("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const data = { drugId: searchDrugRef.current.value };
-    setSearchDrug(data);
-    console.log(data);
-  };
   return (
     <section
       className={
@@ -84,7 +77,41 @@ const Hero = () => {
         />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
+
+function CheckDrug() {
+  const { setSearchDrug } = useContext(PageContext)
+  const searchDrugRef = useRef("")
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const data = { drugId: searchDrugRef.current.value }
+    setSearchDrug(data)
+    console.log(data)
+  }
+
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <fieldset className={"flex gap-2"}>
+        <input
+          ref={searchDrugRef}
+          className={
+            " rounded-3xl px-5  py-4 text-[0.65rem] text-textBlack outline-none md:w-436 md:max-w-[436px] md:px-10 md:text-sm"
+          }
+          type="text"
+          placeholder={"Enter the secure digit on your drug pack"}
+        />
+
+        <button
+          className={"z-50 rounded-3xl bg-indigoDye px-5 text-white md:px-10"}
+        >
+          Check
+        </button>
+      </fieldset>
+    </form>
+  )
+}
