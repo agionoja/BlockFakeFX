@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import PageContextProvider from "./context/PageContextProvider.jsx"
-import PageTemplate from "./pages/PageTemplate.jsx"
+import PageTemplate from "./pages/LandingPage.jsx"
 import Result from "./pages/Result.jsx"
 
 function App() {

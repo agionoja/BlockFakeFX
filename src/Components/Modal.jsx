@@ -2,7 +2,7 @@ export default function Modal({ children, className }) {
   return (
     <div
       className={
-        "z-[100000] my-auto flex h-screen w-full justify-center" +
+        "z-[100000] my-auto mx-auto  fixed -top-20 right-0 left-0 flex max-w-screen w-full justify-center" +
         " " +
         className
       }
