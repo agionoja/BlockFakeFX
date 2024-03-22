@@ -1,5 +1,5 @@
-import animationLeft from "*.png"
-import animationRight from "*.png"
+import animationLeft from "../../assets/animation-left.png"
+import animationRight from "../../assets/animation-right.png"
 
 export default function HeroAnimation() {
   return (

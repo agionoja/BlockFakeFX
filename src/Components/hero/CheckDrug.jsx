@@ -24,7 +24,7 @@ export default function CheckDrug() {
         <input
           ref={searchDrugRef}
           className={
-            " rounded-3xl px-5  py-4 text-[0.65rem] text-textBlack outline-none md:w-436 md:max-w-[436px] md:px-10 md:text-sm"
+            "rounded-3xl px-5  py-4 text-[0.65rem] text-textBlack outline-none md:w-436 md:max-w-[436px] md:px-10 md:text-sm"
           }
           type="text"
           placeholder={"Enter the secure digit on your drug pack"}

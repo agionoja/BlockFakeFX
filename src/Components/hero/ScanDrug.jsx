@@ -1,4 +1,4 @@
-import qrImage from "*.png"
+import qrImage from "../../assets/scan-qr-img.png"
 
 export default function ScanDrug() {
   return (
