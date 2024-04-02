@@ -1,8 +1,8 @@
-import Tab from "./tab/Tab.jsx";
+import Tab from "./tab/Tab.jsx"
 
 function HowTO() {
   return (
-    <section className={"  w-full"}>
+    <section className={"my-20  w-full"}>
       <div className={"mx-auto"}>
         <h2
           className={" mb-1  text-center font-bold text-textBlack md:text-lg"}
@@ -16,7 +16,7 @@ function HowTO() {
       </div>
       <Tab></Tab>
     </section>
-  );
+  )
 }
 
-export default HowTO;
+export default HowTO

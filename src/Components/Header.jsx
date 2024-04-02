@@ -1,19 +1,19 @@
-import logo from "/src/assets/logo.png";
-import hamburger from "/src/assets/hamburger.png";
-import close from "../assets/icon-close.svg";
-import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
-import PageContext from "../context/PageContext.jsx";
+import logo from "/src/assets/logo.png"
+import hamburger from "/src/assets/hamburger.png"
+import close from "../assets/icon-close.svg"
+import { Link } from "react-router-dom"
+import { useContext, useState } from "react"
+import PageContext from "../context/PageContext.jsx"
 
 const Header = () => {
-  const [isHidden, setIsHidden] = useState(true);
-  const { activeRoute } = useContext(PageContext);
+  const [isHidden, setIsHidden] = useState(true)
+  const { activeRoute } = useContext(PageContext)
   const toggleIsHidden = () => {
-    setIsHidden(!isHidden);
-  };
+    setIsHidden(!isHidden)
+  }
 
   return (
-    <div className="relative flex h-full w-full justify-between ">
+    <div className="relative flex h-full w-full justify-between mb-10">
       <div className={"flex gap-2"}>
         <button onClick={toggleIsHidden} className={"z-50  md:hidden "}>
           <img className={" w-8"} src={isHidden ? hamburger : close} alt="" />
@@ -57,7 +57,7 @@ const Header = () => {
         Report Drug
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

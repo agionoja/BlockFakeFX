@@ -4,8 +4,6 @@ import { useContext } from "react"
 import PageContext from "../../context/PageContext.jsx"
 
 export default function QrFrame({ className, isHidden, onClick }) {
-  const { setFetchedResult, scannedResult, setScannedResult } = useContext(PageContext)
-
   return (
     <>
       {isHidden && <div

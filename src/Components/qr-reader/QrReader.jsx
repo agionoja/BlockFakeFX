@@ -1,7 +1,6 @@
 import QrScanner from "qr-scanner"
 import { useContext, useEffect, useRef, useState } from "react"
 import PageContext from "../../context/PageContext.jsx"
-import fetchDrug from "../../../helpers/fetchDrug.js"
 
 export default function QrReader() {
   const scanner = useRef(null)
@@ -9,10 +8,10 @@ export default function QrReader() {
   const qrBoxEl = useRef(null)
   const [qrOn, setQrOn] = useState(true)
 
-  const { setFetchedResult, scannedResult, setScannedResult } = useContext(PageContext)
+  const { scannedResult, setScannedResult } = useContext(PageContext)
 
   useEffect(() => {
-    if (videoEl.current && !scanner.current && !scannedResult) {
+    if (videoEl.current && !scanner.current) {
       scanner.current = new QrScanner(
         videoEl.current,
         (result) => {
@@ -43,22 +42,12 @@ export default function QrReader() {
     }
 
     return () => {
-      if (!videoEl.current) {
+      if (!videoEl.current && scanner.current) {
         scanner.current.stop()
       }
     }
-  }, [scannedResult, setScannedResult])
+  }, [setScannedResult])
 
-
-  useEffect(() => {
-    if (scannedResult) {
-      fetchDrug({ drugId: "Panadol_1710500218279" })
-        .then((response) => {
-          setFetchedResult(response)
-        })
-        .catch((error) => console.log(error))
-    }
-  }, [scannedResult, setFetchedResult])
 
   useEffect(() => {
     if (!qrOn)
