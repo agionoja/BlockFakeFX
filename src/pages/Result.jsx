@@ -26,7 +26,7 @@ export default function Result() {
       <section
         // style={{ backgroundImage: `url(${expiredImg})` }}
         className={
-          `${!fetchedResult ? "h-[450px] " : "h-[400px] "}` +
+          `${!fetchedResult ? "h-[450px] " : "h-[440px] "}` +
           " relative mx-auto  flex w-[345px] flex-col items-center  rounded-lg bg-whiteSmoke px-10 py-8 md:h-[30rem] md:w-[420px]"
         }
       >
@@ -40,7 +40,7 @@ export default function Result() {
         )}
 
         {fetchedResult && (
-          <div className="mt-4 flex w-[19rem] flex-col  gap-2  rounded-lg bg-white  p-6 text-gray md:h-[21rem] md:w-[23rem]">
+          <div className="mt-4 flex w-[19rem] flex-col   gap-2  rounded-lg bg-white  p-6 text-gray md:h-[21rem] md:w-[23rem]">
             <h2 className={"mb-2 font-bold text-black"}>Drugs Details</h2>
             <div className="flex justify-between">
               <p>Drug Name</p>
@@ -77,7 +77,7 @@ export default function Result() {
           </div>
         )}
         <img
-          className={"absolute mx-auto my-12 object-contain opacity-30"}
+          className={"absolute mx-auto my-5 object-contain opacity-30"}
           alt={""}
           src={imageToShow}
         />
@@ -85,7 +85,7 @@ export default function Result() {
         <button
           onClick={handleReset}
           className={
-            "absolute bottom-8 rounded-2xl bg-celestialBlue px-10 py-2 "
+            "absolute bottom-4 rounded-2xl bg-celestialBlue px-10 py-2 "
           }
         >
           Close
