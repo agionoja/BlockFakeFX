@@ -1,12 +1,13 @@
 import Modal from "../Components/Modal.jsx"
 import { useContext } from "react"
 import PageContext from "../context/PageContext.jsx"
-import { calcImg, drugExpired, parseDate } from "../../utils/utils.js"
+import { calcImg, drugExpiredStatus, parseDate } from "../../utils/utils.js"
 
 export default function Result() {
   const { setFetchedResult, setScannedResult, setNotFoundError, fetchedResult, notFoundError } = useContext(PageContext)
-  const isExpired = drugExpired(fetchedResult.expiryDate)
-  const imageToShow = calcImg(fetchedResult, isExpired)
+
+  const isExpired = drugExpiredStatus(fetchedResult.expiryDate)
+  const imageToShow = calcImg(fetchedResult, isExpired, notFoundError)
   const manufacturingDate = parseDate(fetchedResult.manufacturedDate)
   const drugName = fetchedResult.drugName
   const manufacturer = fetchedResult.manufacturer

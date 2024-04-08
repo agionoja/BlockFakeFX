@@ -37,10 +37,10 @@ export function parseDate(dateString) {
   return `${day} ${month} ${year}`
 }
 
-export function drugExpired(fetchedResult) {
-  const expiryDAte = fetchedResult.expiryDate
-  console.log(expiryDAte)
-  return new Date(expiryDAte).getTime() < new Date().getTime()
+export  function drugExpiredStatus(expiryDate) {
+ const status =new Date(expiryDate).getTime() > new Date().getTime()
+  return!status
+
 }
 
 // console.log(parseDate("2024-08-23T13:50:46.659Z"))
