@@ -29,7 +29,7 @@ export default function ScannedResult() {
         {/*  <h3>Please call +2349009090900</h3>*/}
         {/*</div>*/}
         {isInDataBase && (
-          <div className=" flex w-[285px]  flex-col gap-2 rounded-lg bg-white   px-[2rem] text-gray md:w-[20rem] md:py-[1rem]">
+          <div className=" flex w-[285px]  flex-col gap-2 rounded-lg bg-white   px-[2rem] text-gray md:w-[20rem]md:py-[1rem]">
             <h2 className={"mb-2 font-bold text-black"}>Drugs Details</h2>
             <div className="flex justify-between">
               <p>Drug Name</p>
